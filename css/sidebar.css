@@ -2,9 +2,9 @@
  * Sidebar
  */
 
- /* Hide for mobile, show later */
+//   Hide for mobile, show later 
 .sidebar {
-	display: none;
+ 	display: none;
 }
 #sidebar-container {
 	padding-left: 0;
@@ -21,7 +21,7 @@
 #sidebar-container.toggled #sidebar {
 	width: 50px;
 }
-@media (min-width: 768px) {
+@media(min-width: 768px) {
 	.sidebar {
 		position: absolute;
 		top: 51px;
@@ -40,8 +40,28 @@
 		transition: all 0.5s ease;
 	}
 }
+@media(max-width: 768px) {
+	.sidebar {
+		position: absolute;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		background-color: #222222;
+		width: 50px;
+		border-right: 1px solid #eee;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+}
 #sidebar-container.toggled #sidebar:hover {
-	width: 200px;
+	width: 250px;
 }
 
 /* Sidebar navigation */
@@ -51,7 +71,8 @@
 	margin-left: -30px;
 	width: 250px;
 }
-.nav-sidebar > li > a {
+.nav-sidebar > li > a,
+#sidebar-items > li > ul > li > a {
 	color: #00C702;
 	display: block;
     text-decoration: none;
@@ -64,7 +85,12 @@
 	color: #fff;
 	background-color: #007600;
 }
-.nav-sidebar > li > a:hover{
+.nav-sidebar > li > a:hover,
+#sidebar-items > li > ul > li > a:hover {
 	color: #000;
 	background-color: #A6FFA2;
+}
+.submenu-sidebar {
+	margin-left: 60px;
+	// padding: 10px;
 }
