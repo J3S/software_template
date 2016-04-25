@@ -1,0 +1,23 @@
+{
+  "name": "template_software",
+  "homepage": "https://github.com/J3S/software_template",
+  "authors": [
+    "j3s"
+  ],
+  "description": "template for software II",
+  "main": "index.html",
+  "keywords": [
+    "templates"
+  ],
+  "license": "mit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
