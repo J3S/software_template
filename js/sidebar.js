@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  var w = $(window).width();
+  if(w < 768){
+    $("#sidebar-container").toggleClass("toggled");
+  }
   $("#control-sidebar").click(function(e) {
     e.preventDefault();
     $("#sidebar-container").toggleClass("toggled");
@@ -19,4 +23,10 @@ $(document).ready(function(){
         }
       }
     );
+});
+$(window).resize(function(){
+  var w = $(window).width();
+  if(w === 768){
+    $("#sidebar-container").toggleClass("toggled");
+  }
 });
