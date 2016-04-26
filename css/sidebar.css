@@ -60,9 +60,10 @@
 		transition: all 0.5s ease;
 	}
 }
-#sidebar-container.toggled #sidebar:hover {
-	width: 250px;
-}
+/* Efecto cuando se coloca el mouse sobre el sidebar */
+// #sidebar-container.toggled #sidebar:hover {
+// 	width: 220px;
+// }
 
 /* Sidebar navigation */
 .nav-sidebar {
@@ -71,8 +72,7 @@
 	margin-left: -30px;
 	width: 250px;
 }
-.nav-sidebar > li > a,
-#sidebar-items > li > ul > li > a {
+.nav-sidebar > li > a {
 	color: #00C702;
 	display: block;
     text-decoration: none;
@@ -90,7 +90,17 @@
 	color: #000;
 	background-color: #A6FFA2;
 }
-.submenu-sidebar {
-	margin-left: 60px;
+.submenu-sidebar > li > a {
+	// margin-left: 30px;
+	color: #000;
 	// padding: 10px;
+}
+.nav-sidebar > .active{
+	background-color: #FFCE32;
+}
+#sidebar-items > li > ul > li > a{
+	display: block;
+    text-decoration: none;
+    text-indent: 16px;
+    line-height: 15px;
 }
